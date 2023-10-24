@@ -1,0 +1,128 @@
+@font-face {
+    font-family: mooli;
+    src: url('./Mooli/Mooli-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: mooli;
+}
+body{
+    background-image: url('./bgEtoile.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.form-box{
+    border: 1px solid white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 70vw;
+    min-width: 360px;
+    max-width: 500px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px white;
+}
+.form-box h1{
+    color: white;
+    margin: 15px;
+}
+.form-box .input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 30px auto;
+}
+.form-box .input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 30px;
+    border: none;
+    border-bottom: 3px solid white;
+}
+.form-box .input-box input:focus,
+.form-box .input-box input:valid{
+    border-bottom: 3px solid rgb(58, 101, 165);
+    color: white;
+}
+.form-box .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: white;
+    pointer-events: none;
+    font-size: 25px;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+.form-box .input-box svg{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: white;
+}
+.form-box .input-box input:focus~label,
+.form-box .input-box input:valid~label{
+    top: -1vw;
+    color: rgb(58, 101, 165);
+}
+.form-box .input-box input:focus~svg,
+.form-box .input-box input:valid~svg{
+    fill: rgb(58, 101, 165);
+}
+.form-box .error{
+    color: rgb(223, 67, 163);
+}
+.form-box .btn{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgb(3, 3, 129);
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+.form-box .paragraphe{
+    color: white;
+}
+.form-box .btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(rgb(52, 52, 102),rgb(139, 139, 189),rgb(45, 45, 107));
+    z-index: -1;
+    transition: 0.5s;
+}
+.form-box .btn:hover::before{
+    transform: translateY(-50%);
+}
+.form-box a{
+    text-decoration: none;
+    color: rgb(58, 101, 165);
+}
+.form-box a:hover{
+    color: rgb(55, 106, 182);
+    font-weight: 950;
+}

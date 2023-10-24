@@ -1,0 +1,84 @@
+@font-face {
+    font-family: mooli;
+    src: url('./Mooli/Mooli-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: mooli;
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    background-image: url('./bgEtoile.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head a::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 40%;
+    top: 100%;
+    background-color: rgba(0, 0, 255, 0.2);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    display: none;
+}
+table{
+    border-collapse: collapse;
+    backdrop-filter: blur(20px);
+    width: 70vw;
+    min-width: 400px;
+    box-shadow: 0 0 5px white;
+    margin-top: 75px;
+}
+tr:first-child{
+    background:linear-gradient(to right,rgba(1, 190, 190, 0.5),rgba(39, 37, 150, 0.5),rgba(108, 39, 148, 0.5));
+}
+tr:first-child h2{
+    font-size: 1.3rem;
+    font: bold;
+    font-weight: 700;
+    color: white;
+    margin: 10px 5px;
+}
+table tr.paire{
+    backdrop-filter: blur(50px);
+    background-color: rgba(44, 59, 102, 0.329);
+}
+td:first-child{
+    text-align: center;
+    width: 10%;
+    color: gray;
+}
+td{
+    width: auto;
+    min-width: 7Opx;
+    max-width: 300px;
+    text-align: center;
+    padding: 10px;
+}
+td:not(:first-child){
+    color: rgba(255, 255, 255, 0.829);
+}
+td .user-link{
+    color: rgba(5, 172, 250, 0.7);
+    font-size: 1rem;
+}
+td .user-link:hover{
+    text-decoration: underline;
+}
